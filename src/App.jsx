@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import Card from './Card';
+import './App.css'; // Si tienes estilos generales
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <h1>Belleza natural</h1>
+      <div className="card-container">
+        <Card
+          title="Vistas maravillosas"
+          description="Aprecia el hermoso atardecer desde la montaña."
+          image="https://media.istockphoto.com/id/155288168/photo/max-patch-sunset.jpg?s=612x612&w=0&k=20&c=kS0FyNaQguD3PhpYnvfl6SbYtJw0CiItKDxx5lDxGU4=" // Usa tu propia imagen aquí
+        />
+        <Card
+          title="NYC"
+          description="Admira la ciudad de Nueva York desde el aire."
+          image="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/a4/59/20/photo5jpg.jpg?w=1200&h=-1&s=1" // Usa tu propia imagen aquí
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
